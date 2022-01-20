@@ -1,25 +1,142 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from "./components/Header";
+import Figure from "./components/Figure";
+import WrongLetters from "./components/WrongLetters";
+import Word from "./components/Word";
+import CreateWord from "./components/CreateWord";
+import LossModal from "./components/LossModal";
+import WinModal from "./components/WinModal";
+import GuessSection from "./components/GuessSection";
+import { Grid, Container } from "@mui/material";
+import { useEffect, useState } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+  const [wordInput, setWordInput] = useState("");
+  const [wordSubmit, setWordSubmit] = useState(false);
+  const [letterInput, setLetterInput] = useState("");
+  const [correctLetters, setCorrectLetters] = useState([]);
+  const [wrongLetters, setWrongLetters] = useState([]);
+  const [openWinModal, setOpenWinModal] = useState(false);
+  const [openLossModal, setOpenLossModal] = useState(false);
+
+  
+  const handleWordInput = (e) => {
+    const regex = /^[a-zäöüß]+$/;
+    if (e.target.value == "" || e.target.value.match(regex)) {
+      setWordInput(e.target.value);
+    }
+  }
+  
+  const handleWordSubmit = (e) => {
+    e.preventDefault();
+    setWordSubmit(true);
+  }
+
+  const handleLetterInput = (e) => {
+    setLetterInput(e.target.value);
+  }
+
+  const handleLetterSubmit = (e) => {
+    e.preventDefault();
+  }
+
+
+  const handleLoss = () => {
+    setOpenLossModal(true);
+  }
+
+  const handleWin = () => {
+    setOpenWinModal(true);
+  }
+
+
+  const reloadPage = () => {
+    document.location.reload(true);
+  }
+
+
+  const findIndex = (arr, value) => {
+    const corrIndices = [];
+    let idx = arr.indexOf(value);
+    while (idx !== -1) {
+      corrIndices.push(idx);
+      idx = arr.indexOf(value, idx + 1);
+    }
+    return(corrIndices);
+  }
+
+
+  useEffect(() => {
+    const checkLetter = (word, letter) => {
+      const indeces = findIndex(wordInput.split(""), letterInput);
+      const regex = /^[a-zäöüß]+$/;
+
+      if (letter) {
+        if (letter.match(regex)) {
+          if (correctLetters.indexOf(letter) === -1 && wrongLetters.indexOf(letter) === -1) {
+            if (word.indexOf(letter) !== -1) {
+              for (let i = 0; i < indeces.length; i++) {
+                setCorrectLetters(correctLetters => [...correctLetters, word[indeces[i]]]);
+              }
+            } else {
+              setWrongLetters(wrongLetters => [...wrongLetters, letter]);
+            }
+          } else {
+            alert("Key was already tried");
+          }
+        } else {
+          alert("Only lower case german or english letter keys");
+          setLetterInput("");
+        }
+      }
+    }
+    checkLetter(wordInput.split(""), letterInput);
+  }, [letterInput]);
+
+
+  useEffect(() => {
+    if (correctLetters.length !== 0 && correctLetters.length === wordInput.split("").length) {
+      handleWin();
+    }
+
+    if (wrongLetters.length !== 0 && wrongLetters.length === 13) {
+      handleLoss();
+    }
+  }, [wrongLetters, correctLetters]);
+  
+
+  if (wordSubmit === false) {
+    return (
+      <CreateWord wordInput={wordInput} handleWordInput={handleWordInput} handleWordSubmit={handleWordSubmit} />
+    );
+  } else {
+    return (
+      <div className="App">
+        <Header />
+
+        <Grid container spacing={2} align="center">
+          <Grid item xs={12}>
+            <Figure wrongLetters={wrongLetters} />
+          </Grid>
+
+          <Grid item xs={4} align="center">
+            <GuessSection letterInput={letterInput} handleLetterInput={handleLetterInput} handleLetterSubmit={handleLetterSubmit} />
+          </Grid>
+
+          <Grid item xs={4} align="center">
+            <WrongLetters wrongLetters={wrongLetters}/>
+          </Grid>
+
+          <Grid item xs={4} align="center">
+            <Word splitWord={wordInput.split("")} correctLetters={correctLetters} />
+          </Grid>
+        </Grid>
+        <LossModal openLossModal={openLossModal} reloadPage={reloadPage} />
+        <WinModal openWinModal={openWinModal} reloadPage={reloadPage} />
+      </div>
+    );
+  }
 }
 
 export default App;
