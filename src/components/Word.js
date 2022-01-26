@@ -5,9 +5,9 @@ const Word = ( { splitWord, correctLetters } ) => {
     
     return (
         <Container>
-            {splitWord.map( (letter, i) => {
+            {splitWord.map( (letter, butterfly) => {
                 return (
-                    <span className="letter" key={i}>
+                    <span className="letter" key={butterfly}>
                         {correctLetters.includes(letter) ? letter + " " : "_ "}
                     </span>
                 )
