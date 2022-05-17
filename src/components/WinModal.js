@@ -1,26 +1,41 @@
 import React from "react";
-import { Container, Modal, Button, Typography } from "@mui/material";
+import { Container, Box, Modal, Button, Typography } from "@mui/material";
 
 const WinModal = ( { openWinModal, reloadPage } ) => {
 
     return (
         <Modal open={openWinModal}>
-            <Container sx={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                width: 400,
-                bgcolor: "background.paper",
-                border: "2px solid #000",
-                boxShadow: 24,
-                padding: 4
+            <Box sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "100%",
+                bgcolor: "transparent"
+
+            }}>
+                <Container sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: 400,
+                    bgcolor: "#383838",
+                    border: "2px solid #000",
+                    borderColor: "black",
+                    borderRadius: "5px",
+                    boxShadow: 24,
+                    padding: 4,
+                    margin: "auto",
+                    flexDirection: "column"
                 }}>
-                <Typography>
-                    You Won
-                </Typography>
-                <Button onClick={reloadPage}>Play Again</Button>
-            </Container>
+                    <Typography>
+                        You Won
+                    </Typography>
+                    <Button onClick={reloadPage} sx={{
+                        color: "black",
+                        fontSize: "2rem"
+                    }}>Play Again</Button>
+                </Container>
+            </Box>
         </Modal>
     )
 }

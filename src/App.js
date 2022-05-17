@@ -7,7 +7,7 @@ import CreateWord from "./components/CreateWord";
 import LossModal from "./components/LossModal";
 import WinModal from "./components/WinModal";
 import GuessSection from "./components/GuessSection";
-import { Grid, Container } from "@mui/material";
+import { Grid, Container, Box } from "@mui/material";
 import { useEffect, useState } from "react";
 
 const App = () => {
@@ -83,7 +83,7 @@ const App = () => {
               setWrongLetters(wrongLetters => [...wrongLetters, letter]);
             }
           } else {
-            alert("Key was already tried");
+            alert("Already tried key");
           }
         } else {
           alert("Only lower case german or english letter keys");
@@ -112,7 +112,7 @@ const App = () => {
     );
   } else {
     return (
-      <div className="App">
+      <Box className="App">
         <Header />
 
         <Grid container spacing={2} align="center">
@@ -134,7 +134,7 @@ const App = () => {
         </Grid>
         <LossModal openLossModal={openLossModal} reloadPage={reloadPage} />
         <WinModal openWinModal={openWinModal} reloadPage={reloadPage} />
-      </div>
+      </Box>
     );
   }
 }

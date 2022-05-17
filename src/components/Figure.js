@@ -35,7 +35,8 @@ const Figure = ( { wrongLetters } ) => {
                 width: "70%",
                 height: "70%",
                 margin: 3,
-                padding: 2
+                padding: 2,
+                bgcolor: "#484848"
                 }}>
                 <img src={chooseImage(wrongLetters)} alt="figurine" max-width="100%" height="auto" width="100%"></img>
             </Box>
