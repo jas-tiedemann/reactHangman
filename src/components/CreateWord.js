@@ -11,17 +11,19 @@ const CreateWord = ( { wordInput, handleWordInput, handleWordSubmit } ) => {
             boxShadow: 3,
             borderRadius: 2,
             position: "absolute",
-            top: "50%",
+            top: {xs: "25%", sm: "50%"},
             left: "50%",
-            height: "80%",
+            height: {xs: "40%", md: "80%"},
             width: "80%",
+            margin: {xs: "auto", sm: 0},
             transform: "translate(-50%, -50%)",
             alignItems: "center",
-            justifyContent: "center"
+            justifyContent: {xs: "top", md: "center"}
         }}>
             <Typography variant="h3" sx={{
                 color: "black",
-                margin: "0 2rem"
+                margin: "1rem 2rem",
+                fontSize: {xs: "2rem", md: "3rem"}
                 }}>
                 Please type in a word to guess
             </Typography>
@@ -31,7 +33,7 @@ const CreateWord = ( { wordInput, handleWordInput, handleWordSubmit } ) => {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                margin: "80px",
+                margin: {xs: "1rem", md: "2rem"},
                 width: "80%",
                 height: 100,
                 borderRadius: 2
