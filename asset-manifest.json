@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/reactHangman/static/css/main.301584b4.chunk.css",
+    "main.js": "/reactHangman/static/js/main.854a4971.chunk.js",
+    "main.js.map": "/reactHangman/static/js/main.854a4971.chunk.js.map",
+    "runtime-main.js": "/reactHangman/static/js/runtime-main.bd96397c.js",
+    "runtime-main.js.map": "/reactHangman/static/js/runtime-main.bd96397c.js.map",
+    "static/css/2.e3427e36.chunk.css": "/reactHangman/static/css/2.e3427e36.chunk.css",
+    "static/js/2.4e94dbce.chunk.js": "/reactHangman/static/js/2.4e94dbce.chunk.js",
+    "static/js/2.4e94dbce.chunk.js.map": "/reactHangman/static/js/2.4e94dbce.chunk.js.map",
+    "index.html": "/reactHangman/index.html",
+    "static/css/2.e3427e36.chunk.css.map": "/reactHangman/static/css/2.e3427e36.chunk.css.map",
+    "static/css/main.301584b4.chunk.css.map": "/reactHangman/static/css/main.301584b4.chunk.css.map",
+    "static/js/2.4e94dbce.chunk.js.LICENSE.txt": "/reactHangman/static/js/2.4e94dbce.chunk.js.LICENSE.txt",
+    "static/media/400.css": "/reactHangman/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bd96397c.js",
+    "static/css/2.e3427e36.chunk.css",
+    "static/js/2.4e94dbce.chunk.js",
+    "static/css/main.301584b4.chunk.css",
+    "static/js/main.854a4971.chunk.js"
+  ]
+}
