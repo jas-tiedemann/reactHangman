@@ -15,6 +15,7 @@ const App = () => {
   const [wordInput, setWordInput] = useState("");
   const [wordSubmit, setWordSubmit] = useState(false);
   const [letterInput, setLetterInput] = useState("");
+  const [letterList, setLetterList] = useState("");
   const [correctLetters, setCorrectLetters] = useState([]);
   const [wrongLetters, setWrongLetters] = useState([]);
   const [openWinModal, setOpenWinModal] = useState(false);
@@ -33,13 +34,17 @@ const App = () => {
     setWordSubmit(true);
   }
 
+
+
   const handleLetterInput = (e) => {
     setLetterInput(e.target.value);
   }
 
   const handleLetterSubmit = (e) => {
     e.preventDefault();
+    setLetterList(letterInput);
   }
+
 
 
   const handleLoss = () => {
@@ -49,6 +54,7 @@ const App = () => {
   const handleWin = () => {
     setOpenWinModal(true);
   }
+
 
 
   const reloadPage = () => {
@@ -69,7 +75,7 @@ const App = () => {
 
   useEffect(() => {
     const checkLetter = (word, letter) => {
-      const indeces = findIndex(wordInput.split(""), letterInput);
+      const indeces = findIndex(wordInput.split(""), letterList);
       const regex = /^[a-zäöüß]+$/;
 
       if (letter) {
@@ -87,12 +93,12 @@ const App = () => {
           }
         } else {
           alert("Only lower case german or english letter keys");
-          setLetterInput("");
+          setLetterList("");
         }
       }
     }
-    checkLetter(wordInput.split(""), letterInput);
-  }, [letterInput]);
+    checkLetter(wordInput.split(""), letterList);
+  }, [letterList]);
 
 
   useEffect(() => {

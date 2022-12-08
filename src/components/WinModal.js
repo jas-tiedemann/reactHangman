@@ -31,7 +31,7 @@ const WinModal = ( { openWinModal, reloadPage } ) => {
                         You Won
                     </Typography>
                     <Button onClick={reloadPage} sx={{
-                        color: "black",
+                        color: "white",
                         fontSize: "2rem"
                     }}>Play Again</Button>
                 </Container>

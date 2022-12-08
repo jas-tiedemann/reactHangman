@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, TextField } from "@mui/material";
+import { Container, TextField, Button } from "@mui/material";
 
 const GuessSection = ( { letterInput, handleLetterInput, handleLetterSubmit } ) => {
   
@@ -7,11 +7,27 @@ const GuessSection = ( { letterInput, handleLetterInput, handleLetterSubmit } ) 
   return (
     <Container>
       <form onSubmit={handleLetterSubmit}>
-          <TextField
-            onChange={handleLetterInput}
-            inputProps={{maxLength: 1}}
-            value={letterInput.toLowerCase()}>
-          </TextField>
+        <TextField
+          required
+          onChange={handleLetterInput}
+          inputProps={{maxLength: 1}}
+          value={letterInput.toLowerCase()}
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              "&.Mui-focused fieldset": {
+                borderColor: "black"
+              }
+            }
+          }}>
+        </TextField>
+        <Button type="submit" sx={{
+          color: "black",
+          padding: "0.5rem",
+          margin: "0.5rem",
+          border: "1px solid black"
+        }}>
+          Guess
+        </Button>
       </form>
   </Container>
 )

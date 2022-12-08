@@ -21,7 +21,7 @@ const CreateWord = ( { wordInput, handleWordInput, handleWordSubmit } ) => {
             justifyContent: {xs: "top", md: "center"}
         }}>
             <Typography variant="h3" sx={{
-                color: "black",
+                color: "white",
                 margin: "1rem 2rem",
                 fontSize: {xs: "2rem", md: "3rem"}
                 }}>
@@ -39,12 +39,24 @@ const CreateWord = ( { wordInput, handleWordInput, handleWordSubmit } ) => {
                 borderRadius: 2
             }}>
                 <form onSubmit={handleWordSubmit}>
-                    <TextField required variant="outlined" onChange={handleWordInput} value={wordInput.toLowerCase()}>
+                    <TextField required variant="outlined" onChange={handleWordInput} value={wordInput.toLowerCase()} sx={{
+                        input: {color: "white"},
+                        border: "1px solid white",
+                        borderRadius: 1,
+                        "& .MuiOutlinedInput-root": {
+                            "&.Mui-focused fieldset": {
+                              borderColor: "white"
+                            }
+                          }
+                    }}>
                     </TextField>
                     <Button type="submit" sx={{
-                        color: "black"
+                        color: "#f3f3f3",
+                        padding: "0.5rem",
+                        margin: "0.5rem",
+                        border: "1px solid #f3f3f3"
                     }}>
-                    Submit
+                        Submit
                     </Button>
                 </form>
             </Container>

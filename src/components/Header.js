@@ -12,11 +12,12 @@ const Header = () => {
             }}>
             <AppBar position="sticky" sx={{
                 alignItems: "center",
-                backgroundColor: "#383838"
+                backgroundColor: "#383838",
+                padding: {md: "1rem"}
             }}>
                 <Toolbar>
                     <Typography variant="h2" sx={{
-                        color: "black"
+                        color: "#f3f3f3"
                     }}>
                         Hangman
                     </Typography>

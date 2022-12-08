@@ -26,11 +26,13 @@ const LossModal = ( { openLossModal, reloadPage } ) => {
                     margin: "auto",
                     flexDirection: "column"
                 }}>
-                    <Typography>
+                    <Typography sx={{
+                        color: "white"
+                    }}>
                         You Lost
                     </Typography>
                     <Button onClick={reloadPage} sx={{
-                        color: "black",
+                        color: "white",
                         fontSize: "2rem"
                     }}>Play Again</Button>
                 </Container>
