@@ -23,10 +23,7 @@ const App = () => {
 
   
   const handleWordInput = (e) => {
-    const regex = /^[a-zäöüß]+$/;
-    if (e.target.value == "" || e.target.value.match(regex)) {
-      setWordInput(e.target.value);
-    }
+    setWordInput(e.target.value.toLowerCase());
   }
   
   const handleWordSubmit = (e) => {
@@ -37,7 +34,7 @@ const App = () => {
 
 
   const handleLetterInput = (e) => {
-    setLetterInput(e.target.value);
+    setLetterInput(e.target.value.toLowerCase());
   }
 
   const handleLetterSubmit = (e) => {
@@ -76,24 +73,19 @@ const App = () => {
   useEffect(() => {
     const checkLetter = (word, letter) => {
       const indeces = findIndex(wordInput.split(""), letterList);
-      const regex = /^[a-zäöüß]+$/;
 
       if (letter) {
-        if (letter.match(regex)) {
-          if (correctLetters.indexOf(letter) === -1 && wrongLetters.indexOf(letter) === -1) {
-            if (word.indexOf(letter) !== -1) {
-              for (let i = 0; i < indeces.length; i++) {
-                setCorrectLetters(correctLetters => [...correctLetters, word[indeces[i]]]);
-              }
-            } else {
-              setWrongLetters(wrongLetters => [...wrongLetters, letter]);
+        letter = letter.toLowerCase();
+        if (correctLetters.indexOf(letter) === -1 && wrongLetters.indexOf(letter) === -1) {
+          if (word.indexOf(letter) !== -1) {
+            for (let i = 0; i < indeces.length; i++) {
+              setCorrectLetters(correctLetters => [...correctLetters, word[indeces[i]]]);
             }
           } else {
-            alert("Already tried key");
+            setWrongLetters(wrongLetters => [...wrongLetters, letter]);
           }
         } else {
-          alert("Only lower case german or english letter keys");
-          setLetterList("");
+          alert("Already tried key");
         }
       }
     }

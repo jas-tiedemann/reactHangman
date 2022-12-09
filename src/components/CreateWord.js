@@ -10,13 +10,10 @@ const CreateWord = ( { wordInput, handleWordInput, handleWordSubmit } ) => {
             bgcolor: "#383838",
             boxShadow: 3,
             borderRadius: 2,
-            position: "absolute",
-            top: {xs: "25%", sm: "50%"},
-            left: "50%",
-            height: {xs: "40%", md: "80%"},
             width: "80%",
-            margin: {xs: "auto", sm: 0},
-            transform: "translate(-50%, -50%)",
+            height: {xs: "15rem", md: "40rem"},
+            margin: "4rem auto",
+            padding: "5rem 0",
             alignItems: "center",
             justifyContent: {xs: "top", md: "center"}
         }}>
@@ -38,11 +35,11 @@ const CreateWord = ( { wordInput, handleWordInput, handleWordSubmit } ) => {
                 height: 100,
                 borderRadius: 2
             }}>
-                <form onSubmit={handleWordSubmit}>
-                    <TextField required variant="outlined" onChange={handleWordInput} value={wordInput.toLowerCase()} sx={{
+                <form onSubmit={handleWordSubmit} className="formElement">
+                    <TextField required variant="outlined" onChange={handleWordInput} value={wordInput} sx={{
                         input: {color: "white"},
                         border: "1px solid white",
-                        borderRadius: 1,
+                        borderRadius: 1.3,
                         "& .MuiOutlinedInput-root": {
                             "&.Mui-focused fieldset": {
                               borderColor: "white"
@@ -52,7 +49,6 @@ const CreateWord = ( { wordInput, handleWordInput, handleWordSubmit } ) => {
                     </TextField>
                     <Button type="submit" sx={{
                         color: "#f3f3f3",
-                        padding: "0.5rem",
                         margin: "0.5rem",
                         border: "1px solid #f3f3f3"
                     }}>

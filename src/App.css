@@ -1,3 +1,9 @@
 .App {
     font-family: "Roboto", sans-serif;
 }
+
+.formElement {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

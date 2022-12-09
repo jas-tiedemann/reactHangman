@@ -2,8 +2,6 @@ import React from "react";
 import { Container, TextField, Button } from "@mui/material";
 
 const GuessSection = ( { letterInput, handleLetterInput, handleLetterSubmit } ) => {
-  
-
   return (
     <Container>
       <form onSubmit={handleLetterSubmit}>
@@ -11,8 +9,10 @@ const GuessSection = ( { letterInput, handleLetterInput, handleLetterSubmit } ) 
           required
           onChange={handleLetterInput}
           inputProps={{maxLength: 1}}
-          value={letterInput.toLowerCase()}
+          value={letterInput}
           sx={{
+            border: "1px solid black",
+            borderRadius: 1.3,
             "& .MuiOutlinedInput-root": {
               "&.Mui-focused fieldset": {
                 borderColor: "black"
