@@ -27,7 +27,9 @@ const WinModal = ( { openWinModal, reloadPage } ) => {
                     margin: "auto",
                     flexDirection: "column"
                 }}>
-                    <Typography>
+                    <Typography sx={{
+                        color: "white"
+                    }}>
                         You Won
                     </Typography>
                     <Button onClick={reloadPage} sx={{
