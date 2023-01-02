@@ -7,6 +7,7 @@ const GuessSection = ( { letterInput, handleLetterInput, handleLetterSubmit } ) 
       <form onSubmit={handleLetterSubmit}>
         <TextField
           required
+          type="text"
           onChange={handleLetterInput}
           inputProps={{maxLength: 1}}
           value={letterInput}

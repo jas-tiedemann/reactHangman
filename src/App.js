@@ -40,6 +40,7 @@ const App = () => {
   const handleLetterSubmit = (e) => {
     e.preventDefault();
     setLetterList(letterInput);
+    setLetterInput("");
   }
 
 
