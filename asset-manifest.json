@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/reactHangman/static/css/main.fbcaf7a1.chunk.css",
-    "main.js": "/reactHangman/static/js/main.57c4575d.chunk.js",
-    "main.js.map": "/reactHangman/static/js/main.57c4575d.chunk.js.map",
+    "main.js": "/reactHangman/static/js/main.0b94264a.chunk.js",
+    "main.js.map": "/reactHangman/static/js/main.0b94264a.chunk.js.map",
     "runtime-main.js": "/reactHangman/static/js/runtime-main.bd96397c.js",
     "runtime-main.js.map": "/reactHangman/static/js/runtime-main.bd96397c.js.map",
     "static/css/2.e3427e36.chunk.css": "/reactHangman/static/css/2.e3427e36.chunk.css",
@@ -12,6 +12,19 @@
     "static/css/2.e3427e36.chunk.css.map": "/reactHangman/static/css/2.e3427e36.chunk.css.map",
     "static/css/main.fbcaf7a1.chunk.css.map": "/reactHangman/static/css/main.fbcaf7a1.chunk.css.map",
     "static/js/2.4e94dbce.chunk.js.LICENSE.txt": "/reactHangman/static/js/2.4e94dbce.chunk.js.LICENSE.txt",
+    "static/media/hangman-img-0.6af191b1.png": "/reactHangman/static/media/hangman-img-0.6af191b1.png",
+    "static/media/hangman-img-1.8ef2921d.png": "/reactHangman/static/media/hangman-img-1.8ef2921d.png",
+    "static/media/hangman-img-10.4ae28320.png": "/reactHangman/static/media/hangman-img-10.4ae28320.png",
+    "static/media/hangman-img-11.1d35d685.png": "/reactHangman/static/media/hangman-img-11.1d35d685.png",
+    "static/media/hangman-img-12.0beb3aa4.png": "/reactHangman/static/media/hangman-img-12.0beb3aa4.png",
+    "static/media/hangman-img-2.db2f8d6f.png": "/reactHangman/static/media/hangman-img-2.db2f8d6f.png",
+    "static/media/hangman-img-3.99b9bc60.png": "/reactHangman/static/media/hangman-img-3.99b9bc60.png",
+    "static/media/hangman-img-4.d10b389c.png": "/reactHangman/static/media/hangman-img-4.d10b389c.png",
+    "static/media/hangman-img-5.092f1051.png": "/reactHangman/static/media/hangman-img-5.092f1051.png",
+    "static/media/hangman-img-6.7fc4a972.png": "/reactHangman/static/media/hangman-img-6.7fc4a972.png",
+    "static/media/hangman-img-7.f6a879d2.png": "/reactHangman/static/media/hangman-img-7.f6a879d2.png",
+    "static/media/hangman-img-8.18dfdbdd.png": "/reactHangman/static/media/hangman-img-8.18dfdbdd.png",
+    "static/media/hangman-img-9.9842b4b8.png": "/reactHangman/static/media/hangman-img-9.9842b4b8.png",
     "static/media/400.css": "/reactHangman/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2"
   },
   "entrypoints": [
@@ -19,6 +32,6 @@
     "static/css/2.e3427e36.chunk.css",
     "static/js/2.4e94dbce.chunk.js",
     "static/css/main.fbcaf7a1.chunk.css",
-    "static/js/main.57c4575d.chunk.js"
+    "static/js/main.0b94264a.chunk.js"
   ]
 }
