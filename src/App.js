@@ -34,7 +34,7 @@ const App = () => {
 
 
   const handleLetterInput = (e) => {
-    setLetterInput(e.target.value.toLowerCase());
+    setLetterInput(e.target.value.toLowerCase().slice(0, 1));
   }
 
   const handleLetterSubmit = (e) => {
