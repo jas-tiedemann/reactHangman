@@ -10,7 +10,7 @@ const GuessSection = ( { letterInput, handleLetterInput, handleLetterSubmit } ) 
           type="text"
           onChange={handleLetterInput}
           inputProps={{maxLength: 1}}
-          value={letterInput}
+          value={letterInput.slice(0, 1)}
           sx={{
             border: "1px solid black",
             borderRadius: 1.3,
