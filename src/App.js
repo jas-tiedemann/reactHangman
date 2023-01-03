@@ -23,7 +23,13 @@ const App = () => {
 
   
   const handleWordInput = (e) => {
-    setWordInput(e.target.value.toLowerCase());
+    const regex = "[a-zA-Z0-9äöüÄÖÜß]";
+    if (e.target.value.match(regex)) {
+      setWordInput(e.target.value.toLowerCase());
+    } else {
+      alert("Only german and english letters");
+      return;
+    }
   }
   
   const handleWordSubmit = (e) => {
@@ -74,9 +80,13 @@ const App = () => {
   useEffect(() => {
     const checkLetter = (word, letter) => {
       const indeces = findIndex(wordInput.split(""), letterList);
+      const regex = "[a-zA-Z0-9äöüÄÖÜß]";
+      letter = letter.toLowerCase();
 
       if (letter) {
-        letter = letter.toLowerCase();
+        if (!letter.match(regex)) {
+          alert("Only german and english letters");
+        } else {
         if (correctLetters.indexOf(letter) === -1 && wrongLetters.indexOf(letter) === -1) {
           if (word.indexOf(letter) !== -1) {
             for (let i = 0; i < indeces.length; i++) {
@@ -87,7 +97,7 @@ const App = () => {
           }
         } else {
           alert("Already tried key");
-        }
+        }}
       }
     }
     checkLetter(wordInput.split(""), letterList);
@@ -99,7 +109,7 @@ const App = () => {
       handleWin();
     }
 
-    if (wrongLetters.length !== 0 && wrongLetters.length === 13) {
+    if (wrongLetters.length !== 0 && wrongLetters.length === 12) {
       handleLoss();
     }
   }, [wrongLetters, correctLetters]);
