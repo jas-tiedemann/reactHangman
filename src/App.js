@@ -23,7 +23,7 @@ const App = () => {
 
   
   const handleWordInput = (e) => {
-    const regex = "[a-zA-Z0-9äöüÄÖÜß]";
+    const regex = "[a-zA-ZäöüÄÖÜß]";
     if (e.target.value.match(regex)) {
       setWordInput(e.target.value.toLowerCase());
     } else {
@@ -80,7 +80,7 @@ const App = () => {
   useEffect(() => {
     const checkLetter = (word, letter) => {
       const indeces = findIndex(wordInput.split(""), letterList);
-      const regex = "[a-zA-Z0-9äöüÄÖÜß]";
+      const regex = "[a-zA-ZäöüÄÖÜß]";
       letter = letter.toLowerCase();
 
       if (letter) {
