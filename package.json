@@ -1,6 +1,6 @@
 {
   "name": "react-hangman",
-  "homepage": ".",
+  "homepage": "https://jas-tiedemann.github.io/reactHangman",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

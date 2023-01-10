@@ -35,7 +35,9 @@ const WinModal = ( { openWinModal, reloadPage } ) => {
                     <Button onClick={reloadPage} sx={{
                         color: "white",
                         fontSize: "2rem"
-                    }}>Play Again</Button>
+                    }}>
+                        Play Again
+                    </Button>
                 </Container>
             </Box>
         </Modal>
