@@ -12,6 +12,7 @@ const GuessSection = ( { letterInput, handleLetterInput, handleLetterSubmit } ) 
           inputProps={{maxLength: 1}}
           value={letterInput}
           sx={{
+            input: { color: "white" },
             border: "1px solid white",
             borderRadius: 1.3,
             "& .MuiOutlinedInput-root": {
