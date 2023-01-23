@@ -4,7 +4,9 @@ import { Container } from "@mui/material";
 const Word = ( { splitWord, correctLetters } ) => {
     
     return (
-        <Container>
+        <Container sx={{
+            color: "white"
+        }}>
             {splitWord.map( (letter, i) => {
                 return (
                     <span className="letter" key={i}>

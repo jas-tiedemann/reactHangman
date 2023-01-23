@@ -20,7 +20,7 @@ const WinModal = ( { openWinModal, reloadPage } ) => {
                     width: 400,
                     bgcolor: "#383838",
                     border: "2px solid #000",
-                    borderColor: "black",
+                    borderColor: "white",
                     borderRadius: "5px",
                     boxShadow: 24,
                     padding: 4,

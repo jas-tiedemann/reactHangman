@@ -4,7 +4,9 @@ import { Box, Typography } from "@mui/material";
 const WrongLetters = ( { wrongLetters } ) => {
     return (
         <Box>
-            <Typography>Mistakes: { wrongLetters }</Typography>
+            <Typography sx={{
+                color: "white"
+            }}>Mistakes: { wrongLetters }</Typography>
         </Box>
     )
 }
