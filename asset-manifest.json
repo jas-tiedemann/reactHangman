@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/reactHangman/static/css/main.b50647e7.chunk.css",
+    "main.css": "/reactHangman/static/css/main.69473a04.chunk.css",
     "main.js": "/reactHangman/static/js/main.c99b65d9.chunk.js",
     "main.js.map": "/reactHangman/static/js/main.c99b65d9.chunk.js.map",
     "runtime-main.js": "/reactHangman/static/js/runtime-main.bd96397c.js",
@@ -10,7 +10,7 @@
     "static/js/2.4e94dbce.chunk.js.map": "/reactHangman/static/js/2.4e94dbce.chunk.js.map",
     "index.html": "/reactHangman/index.html",
     "static/css/2.e3427e36.chunk.css.map": "/reactHangman/static/css/2.e3427e36.chunk.css.map",
-    "static/css/main.b50647e7.chunk.css.map": "/reactHangman/static/css/main.b50647e7.chunk.css.map",
+    "static/css/main.69473a04.chunk.css.map": "/reactHangman/static/css/main.69473a04.chunk.css.map",
     "static/js/2.4e94dbce.chunk.js.LICENSE.txt": "/reactHangman/static/js/2.4e94dbce.chunk.js.LICENSE.txt",
     "static/media/hangman-img-10.16c40dd2.png": "/reactHangman/static/media/hangman-img-10.16c40dd2.png",
     "static/media/hangman-img-11.a5f197a6.png": "/reactHangman/static/media/hangman-img-11.a5f197a6.png",
@@ -29,7 +29,7 @@
     "static/js/runtime-main.bd96397c.js",
     "static/css/2.e3427e36.chunk.css",
     "static/js/2.4e94dbce.chunk.js",
-    "static/css/main.b50647e7.chunk.css",
+    "static/css/main.69473a04.chunk.css",
     "static/js/main.c99b65d9.chunk.js"
   ]
 }
